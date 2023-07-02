@@ -1,5 +1,6 @@
 package com.sample.characterviewer_sdk.view
 
+
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,9 +9,7 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sample.characterviewer_sdk.R
 import com.sample.characterviewer_sdk.adapter.CharacterAdapter
 import com.sample.characterviewer_sdk.databinding.FragmentCharacterBinding
 import com.sample.characterviewer_sdk.model.ProfileChar
@@ -60,7 +59,7 @@ class CharacterFragment: Fragment() {
             override fun onQueryTextChange(newText: String?): Boolean {
             val filteredList = stringSearch.filter { chars ->
                 newText?.let {
-                    chars.name?.uppercase()?.contains(it.uppercase())
+                    chars.name.uppercase().contains(it.uppercase())
                 } ?: false
             }
                 characterAdapter.updateChar(filteredList)

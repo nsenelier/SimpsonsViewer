@@ -13,6 +13,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:padding="20dp"
+        android:contentDescription="@string/image_character"
         tools:src="@drawable/ic_launcher_foreground" />
 
     <TextView
