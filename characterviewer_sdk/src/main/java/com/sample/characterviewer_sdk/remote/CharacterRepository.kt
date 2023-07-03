@@ -23,7 +23,6 @@ class RepositoryImpl @Inject constructor(
     private val ioDispatcher: CoroutineDispatcher
 ): CharacterRepository {
 
-
     override fun getAllCharacters(type: AppType): Flow<UIState<List<ProfileChar>>> = flow {
         emit(UIState.Loading)
 

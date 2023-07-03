@@ -1,9 +1,9 @@
 package com.sample.characterviewer_sdk.di
 
 import com.google.gson.Gson
-import com.sample.characterviewer_sdk.remote.NetworkApi
 import com.sample.characterviewer_sdk.remote.CharacterApi
 import com.sample.characterviewer_sdk.remote.CharacterRepository
+import com.sample.characterviewer_sdk.remote.NetworkApi
 import com.sample.characterviewer_sdk.remote.RepositoryImpl
 import com.sample.characterviewer_sdk.util.BASE_URL
 import dagger.Module
@@ -73,8 +73,3 @@ class NetworkModule: NetworkApi {
     override fun providesIODispatcher(): CoroutineDispatcher = Dispatchers.IO
 
 }
-
-//@Binds
-//abstract fun providesRepository(
-//    repositoryImpl: RepositoryImpl
-//): CharacterRepository
